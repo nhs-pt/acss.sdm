@@ -1,0 +1,75 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+library(acss.sdm)
+```
+
+# acss.sdm
+
+<!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+<!-- badges: end -->
+
+The goal of `{acss.sdm}` is to provide some basic web scraping routines for
+extraction of information from Sistema de Dados Mestre (SDM): `r sdm_server()`.
+
+The SDM is a service by the Portuguese Central Administration of the Health
+System (ACSS).
+
+## Installation
+
+You can install the current version of `{acss.sdm}` with:
+
+``` r
+# install.packages("remotes")
+remotes::install_github("nhs-pt/acss.sdm")
+```
+
+## Usage
+
+### Get a concept
+
+Get information on a SDM concept:
+
+```{r concept}
+library(acss.sdm)
+
+# https://sdm.min-saude.pt/bi.aspx?id_con=1
+get_concepts(1)
+```
+
+The function `get_concepts` is vectorised over the concept identifiers `id`:
+
+```{r concepts}
+get_concepts(1:3)
+```
+
+### Get an indicator
+
+```{r indicators}
+get_indicators(1:3)
+```
+
+### Wide format
+
+By default the information is retrieved in long format. You can make it wider with `make_wide`:
+
+```{r concepts_wide}
+get_concepts(1:10) %>%
+  make_wide()
+```
+
+```{r indicators_wide}
+get_indicators(1:10) %>%
+  make_wide()
+```
