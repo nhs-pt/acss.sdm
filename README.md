@@ -127,3 +127,9 @@ get_indicators(1:10) %>%
 #> #   Inclusão de utentes no indicador <chr>, Prazo para Registos <chr>,
 #> #   Legenda <chr>
 ```
+
+## TODO
+
+-   Check the extra info coming with the flag `clusters=S` in
+    `https://sdm.min-saude.pt/bi.aspx?id=368&clusters=S`, and see if
+    it’s parsable.

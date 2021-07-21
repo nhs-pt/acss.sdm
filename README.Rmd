@@ -73,3 +73,7 @@ get_concepts(1:10) %>%
 get_indicators(1:10) %>%
   make_wide()
 ```
+
+## TODO
+
+- Check the extra info coming with the flag `clusters=S` in `https://sdm.min-saude.pt/bi.aspx?id=368&clusters=S`, and see if it's parsable.
