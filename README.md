@@ -133,3 +133,5 @@ get_indicators(1:10) %>%
 -   Check the extra info coming with the flag `clusters=S` in
     `https://sdm.min-saude.pt/bi.aspx?id=368&clusters=S`, and see if
     it’s parsable.
+-   Ditto for
+    `https://sdm.min-saude.pt/hierarquia.aspx?cod_mes_uf=202107&cod_mes_ars=202107&cod_uo=ars&id_uo=2`
